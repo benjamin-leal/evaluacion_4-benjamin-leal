@@ -68,6 +68,17 @@ src/
 
 HTML semántico, enlace «Saltar al contenido», `label` asociado a cada campo, errores con `aria-invalid`/`aria-describedby`, foco visible, `NavLink` con sección activa, foco al contenido al cambiar de ruta, `<title>` por página. Diseño mobile-first con los mismos puntos de quiebre de la E2 (768 px y 1100 px).
 
+**Revisión Lighthouse** (Chrome, versión compilada con `npm run build`, modo móvil):
+
+| Página | Rendimiento | Accesibilidad | Buenas prácticas | SEO |
+| --- | --- | --- | --- | --- |
+| Inicio | 89 | 100 | 96 | 83 |
+| Sobre mí | 100 | 100 | 96 | 82 |
+| Trabajos | 95 | 100 | 96 | 83 |
+| Contacto | 100 | 100 | 96 | 82 |
+
+**Qué encontré:** la accesibilidad salió en 100 en todas las páginas. En SEO faltaba una `meta description`, que se puede agregar en `index.html`. El error de robots.txt aparece solo al probar con `vite preview`. En buenas prácticas hay un error de consola menor.
+
 ## Documentos del proyecto
 
 [`INVENTARIO.md`](INVENTARIO.md) · [`uso_ia.md`](uso_ia.md) 
